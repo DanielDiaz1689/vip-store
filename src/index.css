@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/*
+  Tema de VIP STORE — tienda clara y elegante.
+  (Distinto al portafolio, que es oscuro: cada proyecto con su identidad)
+*/
+@theme {
+  --color-fondo: #f6f7fb;
+  --color-superficie: #ffffff;
+  --color-primario: #4f46e5;
+  --color-primario-oscuro: #4338ca;
+  --color-tinta: #0f172a;
+  --color-gris: #64748b;
+  --color-borde: #e2e8f0;
+  --color-exito: #059669;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-primario);
+  color: white;
+}
