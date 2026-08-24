@@ -1,19 +1,27 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import fondo from '../assets/fondo-inicio.png'
 
 /*
-  Portada de la tienda — recrea la página Inicio.razor del proyecto
-  Blazor original: imagen de fondo a pantalla completa + botón de entrada.
+  Portada de la tienda — fondo sobrio: degradado oscuro,
+  dos brillos difuminados y una cuadrícula sutil.
+  Todo hecho con CSS (sin imágenes = carga instantánea).
 */
 export default function Inicio() {
   return (
-    <section
-      className="relative flex min-h-[calc(100vh-62px)] items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${fondo})` }}
-    >
-      {/* Capa oscura para que el texto resalte sobre la foto */}
-      <div className="absolute inset-0 bg-black/55" />
+    <section className="relative flex min-h-[calc(100vh-62px)] items-center justify-center overflow-hidden bg-[#0b1020]">
+      {/* Brillos difuminados */}
+      <div className="absolute -top-32 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-indigo-600/25 blur-[120px]" />
+      <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-sky-500/10 blur-[100px]" />
+
+      {/* Cuadrícula sutil de fondo */}
+      <div
+        className="absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage:
+            'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
+          backgroundSize: '56px 56px',
+        }}
+      />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -27,7 +35,7 @@ export default function Inicio() {
         <h1 className="mb-4 text-5xl font-extrabold tracking-tight md:text-7xl">
           VIP <span className="text-indigo-400">STORE</span>
         </h1>
-        <p className="mx-auto mb-8 max-w-md text-lg text-white/80">
+        <p className="mx-auto mb-8 max-w-md text-lg text-white/70">
           Los mejores dispositivos, al mejor precio y con envío a toda Colombia.
         </p>
         <Link
@@ -36,6 +44,13 @@ export default function Inicio() {
         >
           Explorar la tienda →
         </Link>
+
+        {/* Sellos de confianza */}
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs font-medium uppercase tracking-widest text-white/40">
+          <span>🚚 Envío nacional</span>
+          <span>🛡️ Garantía 12 meses</span>
+          <span>💳 Pago seguro</span>
+        </div>
       </motion.div>
     </section>
   )
