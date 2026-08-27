@@ -48,7 +48,7 @@ export default function Inicio() {
         {/* Sellos de confianza */}
         <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs font-medium uppercase tracking-widest text-white/40">
           <span>🚚 Envío nacional</span>
-          <span>🛡️ Garantía 12 meses</span>
+          <span>🛡️ Garantía 30 dias</span>
           <span>💳 Pago seguro</span>
         </div>
       </motion.div>
