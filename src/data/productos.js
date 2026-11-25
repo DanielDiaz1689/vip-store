@@ -13,15 +13,15 @@ import airpodsMax from '../assets/productos/airpods-max.jpg'
 
 export const IVA_PORCENTAJE = 19 // IVA Colombia
 
-export const categorias = ['Todos', 'Smartphones', 'Audio', 'Wearables', 'Realidad mixta']
+export const categorias = ['Todos', 'Telefonia', 'Audio', 'Relojes', 'Realidad Virtual']
 
 export const productos = [
   {
     id: 1,
     titulo: 'iPhone 13 128GB',
-    descripcion: 'Pantalla Super Retina XDR de 6.1", chip A15 Bionic y cámara dual de 12 MP. El equilibrio perfecto entre precio y potencia.',
+    descripcion: 'Pantalla Super Retina XDR de 6.1", chicarritop A15 Bionic y cámara dual de 12 MP. El equilibrio perfecto entre precio y potencia.',
     precio: 1800000,
-    categoria: 'Smartphones',
+    categoria: 'Telefonia',
     imagen: iphone13,
   },
   {
@@ -29,7 +29,7 @@ export const productos = [
     titulo: 'iPhone 16 Pro 256GB',
     descripcion: 'Titanio, chip A18 Pro y sistema de cámaras profesional con zoom óptico 5x. Fotografía de otro nivel.',
     precio: 4299900,
-    categoria: 'Smartphones',
+    categoria: 'Telefonia',
     imagen: iphone16pro,
   },
   {
@@ -37,7 +37,7 @@ export const productos = [
     titulo: 'iPhone 16 Pro Max 512GB',
     descripcion: 'La pantalla más grande y la mejor batería en un iPhone. Acabado titanio desierto.',
     precio: 6599900,
-    categoria: 'Smartphones',
+    categoria: 'Telefonia',
     imagen: iphone16proMax,
   },
   {
@@ -45,7 +45,7 @@ export const productos = [
     titulo: 'Apple Watch Series 11',
     descripcion: 'Pantalla más grande, carga rápida y sensores avanzados de salud. Tu entrenador personal en la muñeca.',
     precio: 2149900,
-    categoria: 'Wearables',
+    categoria: 'Relojes',
     imagen: appleWatch10,
   },
   {
@@ -69,7 +69,7 @@ export const productos = [
     titulo: 'Apple Vision Pro',
     descripcion: 'Computación espacial: apps, cine y trabajo en un lienzo infinito. El futuro, hoy.',
     precio: 3990000,
-    categoria: 'Realidad mixta',
+    categoria: 'Realidad Virtual',
     imagen: visionPro,
   },
 ]
