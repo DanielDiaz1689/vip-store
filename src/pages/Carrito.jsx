@@ -137,6 +137,39 @@ export default function Carrito() {
               </tbody>
             </table>
           </div>
+          <div className="space-y-3 md:hidden">
+
+{items.map((item) => (
+
+<div key={item.id} className="flex gap-3 rounded-2xl border border-borde bg-superficie p-4">
+
+<img src={item.imagen} alt={item.titulo} className="h-16 w-16 rounded-lg border border-borde bg-white object-contain p-1" />
+
+<div className="flex-1">
+
+<p className="font-semibold">{item.titulo}</p>
+
+<p className="text-sm text-gris">{formatoCOP(item.precio)} c/u</p>
+
+<div className="mt-2 flex w-fit items-center rounded-lg border border-borde">
+
+<button onClick={() => cambiarCantidad(item.id, item.cantidad - 1)} className="px-2.5 py-1">−</button>
+
+<span className="w-6 text-center font-semibold">{item.cantidad}</span>
+
+<button onClick={() => cambiarCantidad(item.id, item.cantidad + 1)} className="px-2.5 py-1">+</button>
+
+</div>
+
+</div>
+
+<button onClick={() => eliminar(item.id)} aria-label={`Eliminar ${item.titulo}`}>🗑️</button>
+
+</div>
+
+))}
+
+</div>
 
           <button
             onClick={vaciar}
