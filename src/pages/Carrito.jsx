@@ -81,7 +81,8 @@ export default function Carrito() {
       <div className="grid gap-8 lg:grid-cols-[1.6fr_1fr]">
         {/* Tabla de productos */}
         <div>
-          <div className="overflow-x-auto rounded-2xl border border-borde bg-superficie">
+         
+          <div className="hidden md:block overflow-x-auto rounded-2xl border border-borde bg-superficie">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-borde text-left text-xs uppercase tracking-wider text-gris">
